@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./tab logo.jpg">
+    <title>Teslahomepage</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            /* border: 1px solid red; */
+            height: 100vh;
+            position: relative;
+        }
+
+        .all3video {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+        }
+
+        .input-1 {
+            position: absolute;
+            left: 50px;
+            top: 90%;
+            z-index: 1;
+        }
+
+        .input-1:checked+.video1 {
+            opacity: 1;
+        }
+
+        .input-2 {
+            position: absolute;
+            left: 70px;
+            top: 90%;
+            z-index: 1;
+        }
+
+
+        .input-2:checked+.video2 {
+
+            opacity: 1;
+        }
+
+        .input-3:checked+.video3 {
+            opacity: 1;
+        }
+
+        .input-3 {
+            position: absolute;
+            left: 90px;
+            top: 90%;
+            z-index: 1;
+
+        }
+
+        .video1,
+        .video2,
+        .video3 {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+            object-fit: cover;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+        }
+
+
+        .header1 {
+            width: 100%;
+            height: 100%;
+            /* border: 4px solid red; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0px
+        }
+
+        .menubar {
+            width: 100%;
+            height: 50px;
+            /* background-color: aquamarine; */
+            /* border: 1px solid red; */
+            /* margin-top: 48px; */
+        }
+
+        .logo {
+            width: 150px;
+            height: 100%;
+            /* border: 1px solid gold; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 30px;
+
+        }
+
+        #textlogo {
+            width: 150px;
+            height: 100%;
+            color: white;
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(103%) contrast(103%);
+        }
+
+        .tagelist {
+            width: 500px;
+            height: 100%;
+            /* border: 1px solid blue; */
+            margin-left: 150px;
+            /* color: red; */
+        }
+
+        .logo,
+        .tagelist,
+        .icon {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .icon {
+            width: 100px;
+            height: 50px;
+            color: white;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 1000px;
+            margin-top: -50px;
+            word-spacing: 20px;
+            /* border: 1px solid greenyellow; */
+            padding-top: 10px;
+        }
+
+        .taglist-li {
+            display: inline-block;
+            vertical-align: top;
+            color: white;
+            list-style: none;
+            margin-left: 30px;
+            margin-top: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+
+
+        .taglist-li:hover .drop-down {
+            opacity: 1;
+            height: 500px;
+        }
+
+        .drop-down ul li {
+            list-style: none;
+            margin-top: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .drop-down {
+            width: 1300px;
+            height: 0px;
+            /* border: 1px solid red; */
+            background-color: white;
+            position: absolute;
+            left: -820%;
+            top: 25px;
+            overflow: hidden;
+            transition: 0.4s;
+            opacity: 0px;
+            z-index: 1;
+
+        }
+
+        .picdetail {
+            width: 220px;
+            height: 170px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 20px;
+            margin-left: 50px;
+
+        }
+
+        .left {
+            margin-left: 30px
+        }
+
+        .text2 {
+            width: 200px;
+            height: 50px;
+            color: black;
+            /* border: 1px solid blueviolet; */
+            text-align: center;
+            margin-top: 3px;
+            margin-left: 7px;
+
+
+        }
+
+        .modelS {
+            width: 200px;
+            height: 100px;
+            /* border: 3px solid blue; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 7px;
+            margin-top: 10px;
+        }
+
+        #models1 {
+            width: 200px;
+            height: 100px;
+
+        }
+
+        .model3 {
+            width: 200px;
+            height: 100px;
+            /* border: 3px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 7px;
+        }
+
+        #modle3pic {
+            width: 195px;
+            height: 95px;
+        }
+
+        .modelx {
+            width: 200px;
+            height: 100px;
+            /* border:F
+            /* 3px solid yellow; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 7px;
+        }
+
+        #xmodel {
+            width: 195px;
+            height: 95px;
+
+
+        }
+
+        #mechoose {
+            width: 195px;
+            height: 95px;
+
+
+        }
+
+        .sublist {
+            width: 300px;
+            height: 490px;
+            /* border: 1px solid blue; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #unstyle {
+            margin-left: 30px;
+            margin-top: 20px;
+            list-style: none;
+        }
+
+
+        .leftborder1 {
+
+            border-left: 1px solid gray;
+            margin-left: 20px;
+
+        }
+
+        .inventory {
+            color: black;
+        }
+
+        .usedcar,
+        .demodrive,
+        .trade-in,
+        .compare,
+        .charge,
+        .fleet,
+        .semi,
+        .roadster {
+            margin-top: 10px;
+            color: black;
+        }
+
+        .carlist {
+            width: 950px;
+            height: 490px;
+            /* border: 2px solid green; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 30px;
+
+        }
+
+        .modely {
+            width: 200px;
+            /* height: 100px; */
+            /* border: 3px solid yellow; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 7px;
+        }
+
+        .choose {
+            width: 200px;
+            height: 100px;
+            /* border: 3px solid yellow; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 7px;
+        }
+
+        .truck {
+            margin-left: 30px;
+        }
+
+        .detail {
+            width: 220px;
+            height: 170px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+
+
+
+
+        #modelya1 {
+            width: 195px;
+            height: 95px;
+
+
+        }
+
+        .upline {
+            width: 870px;
+            height: 210px;
+            /* border: 1px solid blue; */
+            margin-top: 20px;
+            margin-left: 50px;
+
+        }
+
+        .cyber {
+            width: 200px;
+            height: 100px;
+            /* border: 3px solid yellow; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 7px;
+        }
+
+        #cybertruck {
+            width: 195px;
+            height: 95px;
+        }
+
+        .videotext {
+            width: 550px;
+            height: 250px;
+            /* border: 2px solid blue; */
+            margin-top: 10px;
+            margin-left: 50px;
+            position: relative;
+        }
+
+        .modelnewY,
+        .newmodel3,
+        .help1 {
+            width: 540px;
+            height: 230px;
+            position: absolute;
+            /* border: 1px solid red; */
+            color: white;
+            opacity: 0;
+            top: 250px;
+            left: 0;
+        }
+
+        .modelnewY {
+            animation: modelY;
+            animation-duration: 20s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes modelY {
+            0% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 1;
+            }
+
+            34% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .Demo,
+        .order,
+        .help {
+            width: 200px;
+            height: 50px;
+            border-radius: 5px;
+            /* border: 1px solid red; */
+            background-color: white;
+            /* margin-left: 350px; */
+            margin-top: 30px;
+            color: black;
+        }
+
+        .Demo:hover.Demo {
+            background-color: rgba(159, 155, 155, 0.852);
+        }
+
+        .order {
+            color: white;
+            background-color: rgba(26, 25, 25, 0.901);
+        }
+
+        .order:hover.order {
+            background-color: rgba(159, 155, 155, 0.852);
+        }
+
+        .help:hover.help {
+            background-color: rgba(159, 155, 155, 0.852);
+        }
+
+        .newmodel3 {
+            animation: newmodel;
+            animation-duration: 20s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes newmodel {
+            0% {
+                opacity: 0;
+            }
+
+            33% {
+                opacity: 0;
+            }
+
+            34% {
+                opacity: 1;
+            }
+
+            67% {
+                opacity: 1;
+            }
+        }
+
+        .help1 {
+            animation: helpl;
+            animation-duration: 20s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes helpl {
+            0% {
+                opacity: 0;
+            }
+
+            33% {
+                opacity: 0;
+            }
+
+            34% {
+                opacity: 0;
+            }
+
+            67% {
+                opacity: 0;
+            }
+
+            68% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .modelnewY {
+            width: 540px;
+            height: 230px;
+            /* border: 1px solid red; */
+        }
+
+        .modelnewY h1 {
+            /* border: 1px solid blue; */
+            text-align: left;
+            font-size: 40px;
+            color: white;
+        }
+
+        .modelnewY p {
+            width: 600px;
+            text-align: center;
+            color: white;
+            text-align: left;
+            font-size: 15px;
+            /* margin-left: 70px; */
+        }
+
+        .Shopava {
+            width: 300px;
+            height: 50px;
+            border-radius: 5px;
+            /* border: 1px solid red; */
+            background-color: white;
+            /* margin-left: 350px; */
+            margin-top: 30px;
+        }
+
+        .dot3 {
+            width: 100px;
+            height: 25px;
+            /* border: 1px solid red; */
+            margin-top: 300px;
+            margin-left: 50px;
+
+
+        }
+
+        .dota,
+        .dotb,
+        .dotc {
+            width: 15px;
+            height: 15px;
+            border-radius: 100px;
+            background-color: red;
+            display: inline-block;
+            margin-left: 10px;
+
+        }
+
+        /* ///////////////////////section2////////////////// */
+        .Ymodel {
+            width: 100%;
+            height: 120vh;
+            /* border: 3px solid red; */
+            background-image: url(./Homepage-Model-Y-Global-Desktop.jpeg);
+            background-position-y: bottom;
+            background-size: cover;
+            background-position: center;
+            padding: 1px;
+        }
+
+        .modeltext {
+
+            width: 200px;
+            height: 100px;
+            /* border: 1px solid greenyellow; */
+            text-align: center;
+            margin-left: 600px;
+            margin-top: 70px;
+        }
+
+        .modeltext h1 {
+            font-size: 45px;
+        }
+
+        .modeltext p {
+            font-size: 27px;
+        }
+
+        .modeltext p2 {
+            font-size: 18px;
+        }
+
+        .section2 {
+            width: 600px;
+            height: 40px;
+            /* border: 1px solid red; */
+            margin-left: 350px;
+            margin-top: 450px;
+        }
+
+        .Shop,
+        .Demo2 {
+            width: 246px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+
+        .Demo2 {
+            background-color: rgba(0, 0, 0, 0.813);
+            color: white;
+        }
+
+        .Shop:hover {
+            cursor: pointer;
+        }
+
+        .Demo2:hover {
+            cursor: pointer;
+        }
+
+        .tax {
+            width: 580px;
+            height: 20px;
+            /* border: 1px solid darkgoldenrod; */
+            margin-top: 20px;
+        }
+
+        /* /////////////////////////section 3 /////////////// */
+
+        .model3color {
+            width: 100%;
+            height: 120vh;
+            /* border: 1px solid greenyellow; */
+            background-image: url(./two\ color.jpg);
+            background-position-y: bottom;
+            background-size: cover;
+            background-position: center;
+            padding: 1px;
+        }
+
+        .reengineered {
+            width: 250px;
+            height: 140px;
+            /* border: 1px solid greenyellow; */
+            text-align: center;
+            margin-left: 500px;
+            margin-top: 70px;
+        }
+
+        .reengineered h1 {
+            font-size: 45px;
+        }
+
+        .reengineered p {
+            font-size: 27px;
+        }
+
+        .reengineered p3 {
+            font-size: 18px;
+        }
+
+        .button3 {
+            width: 600px;
+            height: 40px;
+            /* border: 1px solid red; */
+            margin-left: 350px;
+            margin-top: 450px;
+        }
+
+        .Custom,
+        .Demo3 {
+            width: 246px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+
+        .Demo3 {
+            background-color: rgba(0, 0, 0, 0.813);
+            color: white;
+        }
+
+        .Custom:hover {
+            cursor: pointer;
+        }
+
+        .Demo3:hover {
+            cursor: pointer;
+        }
+
+        .tax {
+            width: 650px;
+            height: 20px;
+            /* border: 1px solid darkgoldenrod; */
+            margin-top: 20px;
+        }
+
+        /* ///////////////////////section4/////////////////// */
+
+        .model-x {
+            width: 100%;
+            height: 120vh;
+            /* border: 1px solid sandybrown; */
+            background-image: url(./Homepage-Model-X-Desktop-LHD.jpeg);
+            background-position-y: bottom;
+            background-size: cover;
+            background-position: center;
+            padding: 1px;
+        }
+
+        .Model--x {
+            width: 290px;
+            height: 140px;
+            /* border: 1px solid greenyellow; */
+            text-align: center;
+            margin-left: 500px;
+            margin-top: 70px;
+        }
+
+        .Model--x h1 {
+            font-size: 45px;
+        }
+
+        .Model--x p {
+            font-size: 27px;
+        }
+
+        .Model--x p3 {
+            font-size: 15px;
+        }
+
+        .button3 {
+            width: 600px;
+            height: 40px;
+            /* border: 1px solid red; */
+            margin-left: 350px;
+            margin-top: 400px;
+        }
+
+        .Custom,
+        .Demo3 {
+            width: 246px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+
+        .Demo3 {
+            background-color: rgba(0, 0, 0, 0.813);
+            color: white;
+            margin-left: 50px;
+        }
+
+        .Custom:hover {
+            cursor: pointer;
+        }
+
+        .Demo3:hover {
+            cursor: pointer;
+        }
+
+        .tax-x {
+            width: 730px;
+            height: 20px;
+            /* border: 1px solid darkgoldenrod; */
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .tax-x p {
+            margin-left: -50PX;
+        }
+
+        .tax-x h4 {
+            text-align: center;
+
+        }
+
+        /* ///////////////////////////////S////////////////// */
+        .model-s {
+            width: 100%;
+            height: 120vh;
+            border: 1px solid sandybrown;
+            background-image: url(./Homepage-Model-S-Desktop-LHD-6.22.jpg);
+            background-position-y: bottom;
+            background-size: cover;
+            background-position: center;
+            /* padding: 1px; */
+        }
+
+        .Model--as {
+            width: 290px;
+            height: 140px;
+            /* border: 1px solid greenyellow; */
+            text-align: center;
+            margin-left: 500px;
+            /* margin-top: 70px; */
+        }
+
+        .Model--as h1 {
+            font-size: 45px;
+        }
+
+        .Model--as p {
+            font-size: 20px;
+        }
+
+        .Model--as p3 {
+            font-size: 15px;
+        }
+
+        .buttonss {
+            width: 600px;
+            height: 40px;
+            /* border: 1px solid red; */
+            margin-left: 350px;
+            margin-top: 400px;
+        }
+
+        .Custom,
+        .Demo3 {
+            width: 246px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+
+        .Demo3 {
+            background-color: rgba(0, 0, 0, 0.813);
+            color: white;
+            margin-left: 50px;
+        }
+
+        .Custom:hover {
+            cursor: pointer;
+        }
+
+        .Demo3:hover {
+            cursor: pointer;
+        }
+
+        .tax-s {
+            width: 600px;
+            height: 20px;
+            /* border: 1px solid darkgoldenrod; */
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .tax-s p {
+            margin-left: -50PX;
+        }
+
+        .tax-s h4 {
+            text-align: center;
+
+        }
+
+        /* ////////////////////truck/////////////// */
+
+        .truck1 {
+            width: 100%;
+            height: 120vh;
+            /* border: 1px solid sandybrown; */
+            background-image: url(./Homepage-Cybertruck-Desktop.jpg);
+            background-position-y: bottom;
+            background-size: cover;
+            background-position: center;
+            padding: 1px;
+
+        }
+
+        .truck1-buttons {
+            width: 600px;
+            height: 40px;
+            /* border: 1px solid red; */
+            margin-left: 350px;
+            margin-top: 600px;
+        }
+
+        .Custom,
+        .Demo3 {
+            width: 246px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+
+        .Demo3 {
+            background-color: rgba(0, 0, 0, 0.813);
+            color: white;
+            margin-left: 50px;
+        }
+
+        .Custom:hover {
+            cursor: pointer;
+        }
+
+
+
+        /* /////////////////////////Panel///////////////// */
+        .solar-panel {
+
+            width: 100%;
+            height: 120vh;
+            /* border: 1px solid sandybrown; */
+            background-image: url(./Homepage-SolarPanels-01-Desktop.jpeg);
+            background-position-y: bottom;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .solarpanel {
+            width: 290px;
+            height: 100px;
+            /* border: 1px solid greenyellow; */
+            text-align: center;
+            margin-left: 500px;
+            color: white;
+            /* margin-top: 70px; */
+        }
+
+        .solarpanel h1 {
+            font-size: 45px;
+        }
+
+        .solarpanel p {
+            font-size: 20px;
+        }
+
+        .buttonspanel {
+            width: 600px;
+            height: 40px;
+            /* border: 3px solid blue; */
+            margin-left: 350px;
+            margin-top: 600px;
+        }
+
+        .Custom,
+        .Demo3 {
+            width: 246px;
+            height: 100%;
+            /* border: 2px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+
+        .Demo3 {
+            background-color: rgba(0, 0, 0, 0.813);
+            color: white;
+            margin-left: 50px;
+        }
+
+        .Custom:hover {
+            cursor: pointer;
+        }
+
+        /* .tax-s {
+            width: 600px;
+            height: 20px;
+            /* border: 1px solid darkgoldenrod; */
+        /* margin-top: 20px;
+            font-size: 18px;
+        } */
+
+        /*  
+
+        /* ////////////////////////Roof///////////////////// */
+        .solar-roof {
+            width: 100%;
+            height: 120vh;
+            /* border: 1px solid sandybrown; */
+            background-image: url(./Homepage-SolarRoof-Desktop-Global.jpeg);
+            background-position-y: bottom;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .solarroof {
+            width: 290px;
+            height: 85px;
+            /* border: 1px solid greenyellow; */
+            text-align: center;
+            margin-left: 500px;
+            /* margin-top: 70px; */
+        }
+
+        .solarroof h1 {
+            font-size: 45px;
+        }
+
+        .solarroof p {
+            font-size: 15px;
+        }
+
+        .buttons {
+            width: 600px;
+            height: 40px;
+            /* border: 1px solid red; */
+            margin-left: 350px;
+            margin-top: 400px;
+        }
+
+        .Custom,
+        .Demo3 {
+            width: 246px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+
+        .Demo3 {
+            background-color: rgba(0, 0, 0, 0.813);
+            color: white;
+            margin-left: 50px;
+        }
+
+        .Custom:hover {
+            cursor: pointer;
+        }
+
+        .Demo3:hover {
+            cursor: pointer;
+        }
+
+        /* ////////////////////power-wall//////////////// */
+        .power-wall {
+            width: 100%;
+            height: 120vh;
+            /* border: 1px solid sandybrown; */
+            background-image: url(./Homepage-Powerwall-01-Desktop.jpg);
+            background-position-y: bottom;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .powerwall {
+            width: 290px;
+            height: 60px;
+            /* border: 1px solid greenyellow; */
+            text-align: center;
+            margin-left: 500px;
+            /* margin-top: 70px; */
+        }
+
+        .powerwall h1 {
+            font-size: 45px;
+        }
+
+        .buttons {
+            width: 600px;
+            height: 40px;
+            /* border: 1px solid red; */
+            margin-left: 350px;
+            margin-top: 400px;
+        }
+
+        .Custom,
+        .Demo3 {
+            width: 246px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+
+        .Demo3 {
+            background-color: rgba(0, 0, 0, 0.813);
+            color: white;
+            margin-left: 50px;
+        }
+
+        .Custom:hover {
+            cursor: pointer;
+        }
+
+        .Demo3:hover {
+            cursor: pointer;
+        }
+
+        /* //////////////////////////Accesories//////////////////// */
+        .accessories {
+
+            width: 100%;
+            height: 120vh;
+            /* border: 1px solid sandybrown; */
+            background-image: url(./Homepage-Accessories-Desktop-NA-APAC.jpg);
+            background-position-y: bottom;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .accessories1 {
+
+            width: 290px;
+            height: 60px;
+            /* border: 1px solid greenyellow; */
+            text-align: center;
+            margin-left: 500px;
+            /* margin-top: 70px; */
+        }
+
+        .powerwall h1 {
+            font-size: 45px;
+        }
+
+        .buttonsaccessori {
+            width: 250px;
+            height: 40px;
+            /* border: 1px solid red; */
+            margin-left: 550px;
+            margin-top: 400px;
+        }
+
+
+        .shop-now {
+            width: 246px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            /* margin-left: 50px; */
+        }
+
+        .shop-now {
+            background-color: rgba(0, 0, 0, 0.813);
+            color: white;
+            /* margin-left: 50px; */
+        }
+
+        .shop-now:hover {
+            cursor: pointer;
+        }
+
+        .lastbar {
+            width: 650px;
+            height: 30px;
+            /* border: 1px solid red; */
+            margin-left: 400px;
+            margin-top: 200px;
+        }
+
+        .lastbar ul li {
+            color: white;
+            list-style: none;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="all3video">
+            <input class="input-1" checked name="first" type="radio">
+            <video class="video1" src="./Electric Cars, Solar & Clean Energ(M Y).mp4" autoplay loop muted></video>
+            <input class="input-3" type="radio" name="first">
+
+            <video class="video3" src="./Electric Cars, Solar & Clean Energy(4 screen).mp4" autoplay loop muted></video>
+            <input class="input-2" type="radio" name="first">
+
+            <video class="video2" src="./Electric Cars, Solar & Clean Energy(new 3).mp4" autoplay loop muted></video>
+
+        </div>
+        <div class="header1">
+            <div class="menubar">
+                <div class="logo">
+                    <img id="textlogo" src="./tesla1-removebg-preview.png" alt="">
+                </div>
+                <div class="tagelist">
+
+                    <ul class="align">
+                        <li class="taglist-li">Vehicles
+
+
+                            <div class="drop-down">
+                                <div class="carlist">
+                                    <div class="upline">
+                                        <div class="picdetail">
+                                            <div class="modelS">
+                                                <img id="models1" src="./Model_S .jpg" alt="">
+                                            </div>
+                                            <div class="text2">
+                                                <h5>Model S
+                                                </h5>
+                                                <p> Learn
+                                                    Order</p>
+                                            </div>
+                                        </div>
+                                        <!-- ---------------------- -->
+                                        <div class="picdetail left">
+                                            <div class="model3">
+                                                <img id="modle3pic" src="./Model_3.jpg" alt="">
+                                            </div>
+                                            <div class="text2">
+                                                <h5>Model 3
+                                                </h5>
+                                                <p> Learn
+                                                    Order</p>
+                                            </div>
+                                        </div>
+                                        <div class="picdetail">
+                                            <div class="modelx">
+                                                <img id="xmodel" src="./mx_34_model.png" alt="">
+                                            </div>
+                                            <div class="text2">
+                                                <h5>Model X
+                                                </h5>
+                                                <p> Learn
+                                                    Order</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="upline">
+                                        <div class="detail">
+                                            <div class="modely">
+                                                <img id="modelya1" src="./tesla-model-y.jpg" alt="">
+                                            </div>
+                                            <div class="text2">
+                                                <h5>Model Y
+                                                </h5>
+                                                <p> Learn
+                                                    Order</p>
+                                            </div>
+                                        </div>
+                                        <div class="detail truck">
+                                            <div class="cyber">
+                                                <img id="cybertruck" src="./cyber truck.jpeg" alt="">
+                                            </div>
+                                            <div class="text2">
+                                                <h5>Cybertruck
+                                                </h5>
+                                                <p> Learn
+                                                    Order</p>
+                                            </div>
+                                        </div>
+                                        <div class="detail truck">
+                                            <div class="choose">
+                                                <img id="mechoose" src="./help me chose.jpeg" alt="">
+                                            </div>
+                                            <div class="text2">
+                                                <h5>Help Me Choose
+                                                </h5>
+                                                <p> Learn
+                                                    Order</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sublist">
+                                    <ul id="unstyle">
+                                        <div class="leftborder">
+                                            <div class="leftborder1">
+                                                <li class="inventory">
+                                                    <link href="https://www.tesla.com">Inventory
+                                                </li>
+                                                <li class="usedcar">Used Cars</li>
+                                                <li class="demodrive">Demo Drive</li>
+                                                <li class="trade-in">Trade-in</li>
+                                                <li class="compare">Compare</li>
+                                                <li class="charge">Help Me Charge</li>
+                                                <li class="fleet">Fleet</li>
+                                                <li class="semi">Semi</li>
+
+                                                <li class="roadster">Roadster</li>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="taglist-li">Enegry</li>
+                        <li class="taglist-li">Charging</li>
+                        <li class="taglist-li">Discover</li>
+                        <li class="taglist-li">Shop</li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-question"></i>
+                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
+            <!-- =========================remove================================ -->
+
+            <!-- <div class="dot3">
+                <div class="dota"></div>
+                <div class="dotb"></div>
+                <div class="dotc"></div>
+            </div> -->
+            <!-- //////////////////////////////remove//////////////////// -->
+            <div class="videotext">
+                <div class="modelnewY">
+                    <h1>
+                        Model Y Starting at $36,490
+                        <br> After Federal Tax Credit</br>
+                    </h1>
+                    <p>Eligible buyers qualify for a $7,500 federal tax credit. Applied at time of Model Y
+                        <br>delivery. <u>See Details</u></br>
+                    </p>
+                    <button class="Shopava">Shop Available </button>
+                </div>
+                <div class="newmodel3">
+                    <h1>
+                        New Model 3
+                    </h1>
+                    <p>Reengineered from the ground up.<br>
+                        Be the first to get behind the wheel. Demo drive now.</p>
+                    <button class="Demo">Demo Drive </button>
+                    <button class="order">Custom Order </button>
+                </div>
+                <div class="help1">
+                    <h1>Find the Tesla for You</h1>
+                    <p>Discover which model is best for you based on your budget, driving habits
+                        <br> and lifestyle.
+                    </p>
+                    <button class="help">Help Me Choose </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ///////////////////section 2////////////////// -->
+
+    <div class="Ymodel">
+        <div class="modeltext">
+            <h1>Model Y</h1>
+            <p>From $ 36,490</p>
+            <p2>After Federal Tax Credite</p2>
+        </div>
+        <div class="section2">
+            <button class="Shop">Shop Available</button>
+            <button class="Demo2">Demo Drive</button>
+            <div class="tax">
+                <p>*Price before incentives is $43,990, excluding taxes and fees. Subject to change.</p>
+            </div>
+        </div>
+    </div>
+    <!-- ////////////////////Section 3////////////////// -->
+    <div class="model3color">
+        <div class="reengineered">
+            <p>Reengineered</p>
+            <h1>Model 3</h1>
+            <p3>Lease starting at $329/mo*</p>
+        </div>
+        <div class="button3">
+            <button class="Custom">Custome Order</button>
+            <button class="Demo3">Demo Drive</button>
+            <div class="tax">
+                <p>*Excludes taxes and fees with price subject to change. Available in select states. See Details</p>
+            </div>
+        </div>
+    </div>
+    <!-- ////////////////////////////Section 4////////////////////// -->
+    <div class="model-x">
+        <div class="Model--x">
+            <h1>Model X</h1>
+            <p>From $68,590*</p>
+            <p3>After Federal Tax Credit & Est. Gas Savings</p>
+        </div>
+        <div class="button3">
+            <button class="Custom">Custome Order</button>
+            <button class="Demo3">Demo Drive</button>
+            <div class="tax-x">
+                <p>*Price before incentives and savings is $79,990, excluding taxes and fees. Subject to change.</p>
+                <h4><u>Learn about est. gas savings.</u></h4>
+            </div>
+        </div>
+    </div>
+    <!-- /////////////////////////section 5 ///////////////// -->
+
+    <div class="model-s">
+        <div class="Model--as">
+            <h1>Model s</h1>
+            <p>From $71,090*
+            </p>
+            <p3>After Est. Gas Savings</p>
+        </div>
+        <div class="buttonss">
+            <button class="Custom">Custome Order</button>
+            <button class="Demo3">Demo Drive</button>
+            <div class="tax-s">
+                <p>*Price before savings is $74,990, excluding taxes and fees. Subject to change.
+                </p>
+                <h4><u>Learn about est. gas savings.</u></h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////truck//////////////// -->
+    <div class="truck1">
+        <div class="truck1-buttons">
+            <button class="Custom">Custome Order</button>
+            <button class="Demo3">Demo Drive</button>
+
+        </div>
+    </div>
+    <!-- /////////////////////solar panale///////////// -->
+    <div class="solar-panel">
+        <div class="solarpanel">
+            <h1>Solar Panels</h1>
+            <p><u>Schedule a Virtual Consultation</u></p>
+        </div>
+        <div class="buttonspanel">
+            <button class="Custom">Order Now</button>
+            <button class="Demo3">Learn More</button>
+        </div>
+    </div>
+    <!-- /////////////////////////solar roof///////////////// -->
+    <div class="solar-roof">
+        <div class="solarroof">
+            <h1>Solar Roof</h1>
+            <p>Produce Clean Energy From Your Roof
+            </p>
+        </div>
+        <div class="buttons">
+            <button class="Custom">Order Now</button>
+            <button class="Demo3">Learn More</button>
+        </div>
+    </div>
+    <!-- //////////////////////power wall////////////////////// -->
+    <div class="power-wall">
+        <div class="powerwall">
+            <h1>Power Wall</h1>
+        </div>
+        <div class="buttons">
+            <button class="Custom">Order Now</button>
+            <button class="Demo3">Learn More</button>
+        </div>
+    </div>
+    <!-- ///////////////////Accessories///////////////// -->
+    <div class="accessories ">
+        <div class="accessories1">
+            <h1>Accessories</h1>
+        </div>
+        <div class="buttonsaccessori">
+            <button class="shop-now">Shop Now</button>
+        </div>
+        <div class="lastbar">
+            <ul>
+                <li>Tesla@2004</li>
+                <li>Privacy & Legal</li>
+                <li>Vehicle Recalls</li>
+                <li>Contact</li>
+                <li>News</li>
+                <li>Get Updates</li>
+                <li>Locations</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
